@@ -23,12 +23,17 @@ let extraCheese = {
   price: 5.00
 }
 
-Pizza.prototype.orderTotal
+Pizza.prototype.orderTotal = function() {
+  
+}
 
 $(document).ready(function() {
   $("#formOne").submit(function(event) {
     event.preventDefault();
     const customerName = $("input#customerName").val();
     const phoneNumber = $("input#phoneNumber").val();
+
+    $("h5").html(customerName);
+    $("h5").append( ", " + phoneNumber);
   })
 })
