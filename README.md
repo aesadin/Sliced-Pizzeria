@@ -18,9 +18,9 @@ This website takes a number input by the user and creates a range from 0 up to a
   * Input: no input necessary
   * Output: function Orders(pizza, price) (this.pizza = [], this.price = price)
 
-3. Replace the number 1 with the string "Beep!"
-  * Input: 1
-  * Output: "Beep!"
+3. Create pizza objects from constructor, vegetarian, all meat, classic
+  * Input: no input necessary
+  * Output: let vegPizza = new Pizza([sm, md, lg], [garlic, mushroom, spinach], [v, gf, reg])
 
 4. Replace the number 2 with the string "Beep!"
   * Input: 2
