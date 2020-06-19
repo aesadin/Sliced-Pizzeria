@@ -1,0 +1,23 @@
+having a check box to choose toopings
+check box for pizza size
+things ill need:
+  click function
+  appending properties to a list
+
+  function Order(pizza, price, customerName, phoneNumber) {
+  this.pizza = [],
+  this.price = price,
+  this.customerName = customerName,
+  this.phoneNumber = phoneNumber;
+}
+
+Order.prototype.addPizza = function(pizza) {
+  this.pizza.push(pizza);
+}
+
+let order = new Order();
+let vegPizza = new Pizza (["sm", "md", "lg"], ["garlic", "mushroom", "spinach"], ["V", "GF", "Reg"]);
+
+let meatPizza = new Pizza (["sm", "md", "lg"], ["sausage", "pepperoni", "ham"], ["V", "GF", "Reg"]);
+
+let classicPizza = new Pizza (["sm", "md", "lg"], ["mozzarella", "basil", "tomato"], ["V", "GF", "Reg"])

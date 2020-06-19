@@ -14,9 +14,9 @@ This website takes a number input by the user and creates a range from 0 up to a
   * Input: no input necessary
   * Output: function Pizza(size, toppings, type) {this.size, this.toppings,this.typt}
 
-2. Create constructor function that allows pizza orders to be stored and then given a price.
+2. Create prototype to calculate price of pizza
   * Input: no input necessary
-  * Output: function Orders(pizza, price) (this.pizza = [], this.price = price)
+  * Output: 
 
 3. Create pizza objects from constructor, vegetarian, all meat, classic
   * Input: no input necessary
