@@ -9,8 +9,26 @@
   </head>
   <body>
     <div class="container">
-      <h2>Sliced Pizzeria</h2>
+      <header class="jumbotron">
+        <h1>Sliced Pizzeria</h1>
+      </header>
+
+      <h3>Menu</h3>
+        <p><span class="text-danger">Small Pizza: $14.99</span></p>
+        <p><span class="text-danger">Medium Pizza: $18.99</span></p>
+        <p><span class="text-danger">Large Pizza: $22.99</span></p>
+
       <form id="formOne">
+        <div class="form-group">
+          <input type="checkbox" name="pizzaSize" value="small"> Small<br>
+          <input type="checkbox" name="pizzaSize" value="medium"> Medium<br>
+          <input type="checkbox" name="pizzaSize" value="Large"> Large<br>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="toppings" value="anchovy"> Anchovies<br>
+          <input type="checkbox" name="toppings" value="artichoke"> Artichoke<br>
+          <input type="checkbox" name="toppings" value="cheese"> Cheese<br>
+        </div>
         <div class="form-group">
           <label for="customerName">Your Name</label>
           <input id="customerName" class="form-control" type="text">
