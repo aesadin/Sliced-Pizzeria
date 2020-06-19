@@ -23,23 +23,87 @@
         <p><span class="text-danger">Artichoke: $3.00</span></p>
         <p><span class="text-danger">Cheese: $4.00</span></p>
 
-      <form id="formOne">
-        <div class="form-group">
-          <label for="pizzaSize">Please Write which size you would like</label>
-          <input id="pizzaSize" class="form-control" type="text">
+      <form class="formOne">
+        <h3>Please select pizza size</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="small">
+            Small Pizza
+          </label>
         </div>
-        <div class="form-group">
-          <label for="addAnchovy">Please write anchovy if you would like anchovy</label>
-          <input id="addAnchovy" class="form-control" type="number" required>
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="medium">
+            Medium Pizza
+          </label>
         </div>
-        <div class="form-group">
-          <label for="customerName">Your Name</label>
-          <input id="customerName" class="form-control" type="text">
+        <div class="radio">
+          <label>
+            <input type="radio" name="size" value="large">
+            Large Pizza
+          </label>
         </div>
-        <div class="form-group">
-          <label for="phoneNumber">Phone Number</label>
-          <input id="phoneNumber" class="form-control" type="number" required>
+
+        <h3>Please select your <strong>first</strong> topping</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="firstTopping" value="anchovy">
+            Anchovy
+          </label>
         </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="firstTopping" value="artichoke">
+            Artichoke
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="firstTopping" value="cheese">
+            Cheese
+          </label>
+        </div>
+
+        <h3>Please select your <strong>second</strong> topping</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="secondTopping" value="anchovy">
+            Anchovy
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="secondTopping" value="artichoke">
+            Artichoke
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="secondTopping" value="cheese">
+            Cheese
+          </label>
+        </div>
+
+        <h3>Please select your <strong>second</strong> topping</h3>
+        <div class="radio">
+          <label>
+            <input type="radio" name="thirdTopping" value="anchovy">
+            Anchovy
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="thirdTopping" value="artichoke">
+            Artichoke
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="thirdTopping" value="cheese">
+            Cheese
+          </label>
+        </div>
+
         <div class="form-group">
           <label for="customerName">Your Name</label>
           <input id="customerName" class="form-control" type="text">
@@ -50,12 +114,8 @@
         </div>
         <button type="submit" class="btn btn-danger">Order</button>
       </form>
-      <div id="output">
-        <span class="pizzaOrder">
-          <p><b>Your Order</b></p>
-        </span>
-        <h5>
-        </h5>
+      <div>
+        <h5></h5>
       </div>
     </div>
   </body>
@@ -63,13 +123,3 @@
 
 
 
-<!-- <div class="form-group">
-  <input type="checkbox" name="pizzaSize" value="small-pizza"> Small<br>
-  <input type="checkbox" name="pizzaSize" value="medium-pizza"> Medium<br>
-  <input type="checkbox" name="pizzaSize" value="Large-pizza"> Large<br>
-</div>
-<div class="form-group">
-  <input type="checkbox" name="toppings" value="add-anchovy"> Anchovies<br>
-  <input type="checkbox" name="toppings" value="add-artichoke"> Artichoke<br>
-  <input type="checkbox" name="toppings" value="add-cheese"> Cheese<br>
-</div> -->

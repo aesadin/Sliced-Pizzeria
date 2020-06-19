@@ -12,30 +12,22 @@ function Pizza(size, topping1, topping2, topping3) {
 
 
 $(document).ready(function() {
-  $("#formOne").submit(function(event) {
+  $(".formOne").submit(function(event) {
     event.preventDefault();
-    const size = 
-    const inputtedTopping1 =
-    const inputtedTopping2 = 
-    const inputteTopping3 =
-    let newPizza = new Pizza(inputtedTopping1, inputtedTopping2, inputtedTopping3)
-
-    
-
     const customerName = $("input#customerName").val();
     const phoneNumber = $("input#phoneNumber").val();
 
     $("h5").html(customerName);
     $("h5").append( ", " + phoneNumber);
+
+    const inputtedSize = $("input:radio[name=size]:checked").val();
+    const inputtedTopping1 = $("input:radio[name=firstTopping]:checked").val();
+    const inputtedTopping2 = $("input:radio[name=secondTopping]:checked").val();
+    const inputteTopping3 = $("input:radio[name=thirdTopping]:checked").val();
+    let newPizza = new Pizza(inputtedTopping1, inputtedTopping2, inputtedTopping3);
+
   })
 })
 
 
-/*$("input:checkbox[name=pizzaSize]:checked").each(function() {
-  const whatSizePizza = $(this).val();
-  $('.pizzaOrder').append(whatSizePizza + "<br>");
-});
-$("input:checkbox[name=toppings]:checked").each(function() {
-  const whichToppings = $(this).val();
-  $('.pizzaOrder').append(whichToppings + "<br>");
-});*/
+
