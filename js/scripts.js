@@ -2,14 +2,20 @@
 
 
 function Pizza(size, topping1, topping2, topping3) {
-  this.size = [small, medium, large],
+  this.size = size
   this.topping1 = topping1,
   this.topping2 = topping2,
   this.topping3 = topping3
   
 }
 
+function OrderTotal() {
+  this.order = []
+}
 
+//Pizza.prototype.
+
+// UI Logic
 
 $(document).ready(function() {
   $(".formOne").submit(function(event) {
@@ -23,9 +29,10 @@ $(document).ready(function() {
     const inputtedSize = $("input:radio[name=size]:checked").val();
     const inputtedTopping1 = $("input:radio[name=firstTopping]:checked").val();
     const inputtedTopping2 = $("input:radio[name=secondTopping]:checked").val();
-    const inputteTopping3 = $("input:radio[name=thirdTopping]:checked").val();
-    let newPizza = new Pizza(inputtedTopping1, inputtedTopping2, inputtedTopping3);
+    const inputtedTopping3 = $("input:radio[name=thirdTopping]:checked").val();
+    let newPizza = new Pizza(inputtedSize, inputtedTopping1, inputtedTopping2, inputtedTopping3);
 
+    console.log(newPizza)
   })
 })
 
