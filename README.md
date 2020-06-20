@@ -1,52 +1,31 @@
-# Won't You Be My Neighbor
+# Sliced Pizzeria
 
 #### _Date_ 
-June 12, 2020
+June 19, 2020
 
 #### By _Allison Sadin_
 
 ## Description
 
-This website takes a number input by the user and creates a range from 0 up to and including the inputted number. Then it replaces all numbers in that range containing the digit 3, with the sentence "Won't you be my neighbor?". Then it replaces all numbers in that range containing the digit 2, with the word "Boop!". Then it replaces all numbers in that range containing the digit 1, with the word "Beep!". Then it returns the string to the user.
+This website allows the user to order a pizza. It offers 3 size options as well as 3 add on options. The website will collect the users selection and return to them their order as well as their name and phone number and then the order total.
 
 ## Specs
-1. Create object constructor that includes properties for pizza size, pizza toppings and pizza type
+1. Create object constructor that includes properties for pizza size, pizza toppings 
   * Input: no input necessary
-  * Output: function Pizza(size, toppings, type) {this.size, this.toppings,this.typt}
+  * Output: function Pizza(size, topping1, topping2, topping3) {this.size, this.topping1, this.topping2, this.topping3}
 
 2. Create prototype to calculate price of pizza
   * Input: no input necessary
-  * Output: 
+  * Output: small: $14.99, medium: 18.99 large: 22.99
 
-3. Create pizza objects from constructor, vegetarian, all meat, classic
+3. Create prototype that adds 12.00 to the pizza size to account for the added toppings
+  * Input: size: small, topping1: anchovy, topping2: artichoke, topping3: cheese
+  * Output: total: 26.99
+
+
+4. Create object from constructor
   * Input: no input necessary
-  * Output: let vegPizza = new Pizza([sm, md, lg], [garlic, mushroom, spinach], [v, gf, reg])
-
-4. Replace the number 2 with the string "Beep!"
-  * Input: 2
-  * Output: "Boop!"
-
-5. Replace the number 3 with the string "Won't you be my neighbor?"
-  * Input: 3
-  * Output: "Won't you be my neighbor?"
-
-6. When a number in the sequence has any digits in it with a '1', replace number with the string "Beep!".
-  * Input: 91
-  * Output: "Beep!" 
-
-7. When a number in the sequence has any digits in it with a '2', replace number with the string "Boop!". 
-  * Input: 20
-  * Output: "Boop!"
-
-8. When a number in the sequence has any digits in it with a '3', replace number with the string "Won't you be my neighbor?". 
-  * Input: 3
-  * Output: "Won't you be my neighbor?"
-
-9. When a number contains a '1', '2' and '3', the last exception is to be followed over the previous two.
-  * input: 132
-  * Output: "Won't you be my neighbor?"
-
-
+  * Output: newPizza = [small, anchovy, aritchoke, cheese]
 
 ## Setup/Installation Requirements
 
@@ -64,7 +43,7 @@ This website takes a number input by the user and creates a range from 0 up to a
 
 ## Known Bugs
 
-I am unable to run my code and get any output whatsoever. I know the html is functioning properly, so it is an issue with the Javascript.
+I was unable to get the total price prototype to work properly
 
 
 ## Support and contact details
