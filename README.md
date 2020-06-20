@@ -52,11 +52,11 @@ This website takes a number input by the user and creates a range from 0 up to a
 
 #### Open by downloading:
 1. Download the repository onto your computer
-2. Drag and drop index.html in to your web browser from gh-pages:  https://aesadin.github.io/Beep-Boop/
+2. Drag and drop index.html in to your web browser from gh-pages:  https://aesadin.github.io/Sliced-Pizzeria/
 
 #### Open with Bash/GitBash:
 1. _open your bash terminal_
-2. _use git clone, copy and paste github URL using clone or download green button:  https://aesadin.github.io/Beep-Boop/ _
+2. _use git clone, copy and paste github URL using clone or download green button:  https://aesadin.github.io/Sliced-Pizzeria/ _
 3. _Navigate into the 'My-Portfolio' directory using cd My-Portfolio_
 4. _open in Visual Studio code using 'code .' command_
 5. _Open index.html in Chrome or preferred browser: 'open index.html'_
