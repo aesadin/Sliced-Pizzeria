@@ -1,50 +1,65 @@
 // Business Logic
 
 
-function Pizza(size, topping1, topping2, topping3) {
-  this.size = size
-  this.topping1 = topping1,
-  this.topping2 = topping2,
-  this.topping3 = topping3
+
+
+function Pizza(size, toppings, cost) {
+  this.size = size,
+  this.toppings = [],
+  this.cost = cost;
   
 }
 
 
-
-Pizza.prototype.getTotal = function(size) {
-  for (i = 0; i < this.size.length; i++)
-  if (this.size === "small") {
-    return (14.99 + 12.00)
-  } else if (this.size === "medium") {
-    return (18.99 + 12.00)
+Pizza.prototype.toppings = function(toppingsArray) {
+  let cost = 0
+  if (toppingsArray.length === 1) {
+    this.cost += 3;
+  } else if (toppingsArray.length === 2) {
+      this.cost += 6;
   } else {
-    return (22.99 + 12.00)
+      this.cost += 9;
   }
-  
+  return cost
+} 
+
+
+
+
+Pizza.prototype.getTotal = function(toppings) {
+  let cost = 0;
+  if (this.size === "small") {
+    this.cost === (toppings + 14.99)
+  } else if (this.size === "medium") {
+    this.cost === (toppings + 18.99 )
+  } else {
+    this.cost ===(toppings + 22.99)
+  }
+  return cost;
 }
 
 
 
 // UI Logic
 
+
 $(document).ready(function() {
   $(".formOne").submit(function(event) {
     event.preventDefault();
-    const customerName = $("input#customerName").val();
-    const phoneNumber = $("input#phoneNumber").val();
+    const inputSize = $("input:radio[name=size]:checked").val();
 
-    $("p").html(customerName);
-    $("p").append( ", " + phoneNumber);
+    $("#displayToppings").show();
 
-    const inputtedSize = $("input:radio[name=size]:checked").val();
-    const inputtedTopping1 = $("input:radio[name=firstTopping]:checked").val();
-    const inputtedTopping2 = $("input:radio[name=secondTopping]:checked").val();
-    const inputtedTopping3 = $("input:radio[name=thirdTopping]:checked").val();
-    const newPizza = new Pizza(inputtedSize, inputtedTopping1, inputtedTopping2, inputtedTopping3);
-    $("ul").append("<li>" +inputtedSize+ "</li>" + "<li>" +inputtedTopping1+ "<li>" +inputtedTopping2+ "</li>" + "<li>"+inputtedTopping3+ "</li>")
+    $("#displayToppings").append(inputSize + "<br>");
 
     
-    console.log(Pizza.newPizza[0])
+    $("input:checkbox[name=topping]:checked").each(function() {
+      const toppings = $(this).val();
+      $("#displayToppings").append(toppings + "<br>");
+    });
+
+    $("h5").html()
+    $("#displayTotal").show();
     
   })
 })
