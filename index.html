@@ -1,127 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>Pizza Pizza</title>
-  </head>
-  <body>
-    <div class="container">
-      <header class="jumbotron">
-        <h1>Sliced Pizzeria</h1>
-      </header>
-
-      <h3>Menu</h3>
-        <p><span class="text-danger">Small Pizza: $14.99</span></p>
-        <p><span class="text-danger">Medium Pizza: $18.99</span></p>
-        <p><span class="text-danger">Large Pizza: $22.99</span></p>
-
-      <h3>Add Extas!</h3>
-        <p><span class="text-danger">Anchovies: $3.00</span></p>
-        <p><span class="text-danger">Artichoke: $3.00</span></p>
-        <p><span class="text-danger">Cheese: $3.00</span></p>
-
-      <form class="formOne">
-        <h3>Please select pizza size</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="small">
-            Small Pizza
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="medium">
-            Medium Pizza
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="size" value="large">
-            Large Pizza
-          </label>
-        </div>
-
-        <h3>Please select your <strong>first</strong> topping</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="firstTopping" value="anchovy">
-            Anchovy
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="firstTopping" value="artichoke">
-            Artichoke
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="firstTopping" value="cheese">
-            Cheese
-          </label>
-        </div>
-
-        <h3>Please select your <strong>second</strong> topping</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="secondTopping" value="anchovy">
-            Anchovy
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="secondTopping" value="artichoke">
-            Artichoke
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="secondTopping" value="cheese">
-            Cheese
-          </label>
-        </div>
-
-        <h3>Please select your <strong>second</strong> topping</h3>
-        <div class="radio">
-          <label>
-            <input type="radio" name="thirdTopping" value="anchovy">
-            Anchovy
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="thirdTopping" value="artichoke">
-            Artichoke
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="thirdTopping" value="cheese">
-            Cheese
-          </label>
-        </div>
-
-        <div class="form-group">
-          <label for="customerName">Your Name</label>
-          <input id="customerName" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="phoneNumber">Phone Number</label>
-          <input id="phoneNumber" class="form-control" type="number" required>
-        </div>
-        <button type="submit" class="btn btn-danger">Order</button>
-      </form>
-      <div>
-        <h3><em>Your Order:</em></h3>
-          <p></p>
-          <ul>
-          </ul>
-      </div>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.5.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pizza Pizza</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Sliced Pizzeria</h1>
     </div>
-  </body>
+
+    <h3>Menu</h3>
+      <p><span class="text-danger">Small Pizza: $14.99</span></p>
+      <p><span class="text-danger">Medium Pizza: $18.99</span></p>
+      <p><span class="text-danger">Large Pizza: $22.99</span></p>
+
+    <h3>Add Extas!</h3>
+      <p><span class="text-danger">Anchovies: $3.00</span></p>
+      <p><span class="text-danger">Artichoke: $3.00</span></p>
+      <p><span class="text-danger">Olives: $3.00</span></p>
+
+    <h3>Please select pizza size</h3>
+    <form class="formOne">
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="small">
+          Small Pizza
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="medium">
+          Medium Pizza
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="size" value="large">
+          Large Pizza
+        </label>
+      </div>
+      <div class="form-group">
+        <h3>Please select your <strong>Toppings</strong></h3>
+        <p>choose from our selection:</p>
+        <input type="checkbox" name="topping" value="anchovies">Anchovies<br>
+        <input type="checkbox" name="topping" value="artichoke">Artichoke<br>
+        <input type="checkbox" name="topping" value="olives">Olives<br>
+      </div>
+      <button type="submit" class="btn btn-danger">Order</button>
+    </form>
+    <span id="displayToppings">
+      <p><b>Here is your order:</b></p>
+    </span>
+    <span id="displayTotal">
+      <h5><b>Total:</b></h5>
+    </span>
+  </div>
+</body>
 </html>
 
 
