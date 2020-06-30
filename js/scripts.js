@@ -3,40 +3,39 @@
 
 
 
-function Pizza(size, toppings, cost) {
+function Pizza(size, cost, toppings) {
   this.size = size,
-  this.toppings = [],
-  this.cost = cost;
-  
-}
+  this.cost = 0,
+  this.toppings = ["anchovies", "artichoke", "olives"]; 
+};
 
 
-Pizza.prototype.toppings = function(toppingsArray) {
-  let cost = 0
-  if (toppingsArray.length === 1) {
+
+
+Pizza.prototype.getToppingsCost = function(toppings) {
+  if (toppings.length === 1) {
     this.cost += 3;
-  } else if (toppingsArray.length === 2) {
+  } else if (toppings.length === 2) {
       this.cost += 6;
   } else {
       this.cost += 9;
   }
-  return cost
-} 
+  return this.cost
+}; 
 
 
 
 
-Pizza.prototype.getTotal = function(toppings) {
-  let cost = 0;
+Pizza.prototype.getTotal = function() {
   if (this.size === "small") {
-    this.cost === (toppings + 14.99)
+    this.cost += 14.99
   } else if (this.size === "medium") {
-    this.cost === (toppings + 18.99 )
+    this.cost += 18.99 
   } else {
-    this.cost ===(toppings + 22.99)
+    this.cost += 22.99
   }
-  return cost;
-}
+  return this.cost;
+};
 
 
 
@@ -46,23 +45,25 @@ Pizza.prototype.getTotal = function(toppings) {
 $(document).ready(function() {
   $(".formOne").submit(function(event) {
     event.preventDefault();
-    const inputSize = $("input:radio[name=size]:checked").val();
+    const size = $("input:radio[name=size]:checked").val();
+    const toppings = [];
+    const pizza = new Pizza(size, toppings, 0);
+    const toppingsCost = pizza.getToppingsCost(toppings);
+    const sizeCost = pizza.getTotal(size);
 
-    $("#displayToppings").show();
-
-    $("#displayToppings").append(inputSize + "<br>");
-
-    
     $("input:checkbox[name=topping]:checked").each(function() {
-      const toppings = $(this).val();
-      $("#displayToppings").append(toppings + "<br>");
+      toppings.push($(this).val());
+      $("#displayPizza").append(toppings + "<br>");
     });
 
-    $("h5").html()
+    $("h5").html(sizeCost);
     $("#displayTotal").show();
-    
-  })
-})
+
+    $("#displayPizza").show();
+    $("#displayPizza").append(size + "<br>");
+
+  });
+});
 
 
 
