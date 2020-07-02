@@ -1,24 +1,24 @@
 // Business Logic
 
 
-
-
-function Pizza(size, cost, toppings) {
+function Pizza(size, toppings) {
   this.size = size,
   this.cost = 0,
-  this.toppings = ["anchovies", "artichoke", "olives"]; 
+  this.toppings = toppings; 
 };
 
 
 
 
-Pizza.prototype.getToppingsCost = function(toppings) {
-  if (toppings.length === 1) {
+Pizza.prototype.getToppingsCost = function() {
+  if (this.toppings.length === 1) {
     this.cost += 3;
-  } else if (toppings.length === 2) {
+  } else if (this.toppings.length === 2) {
       this.cost += 6;
-  } else {
+  } else if (this.toppings.length === 3) {
       this.cost += 9;
+  } else {
+      this.cost === 0;
   }
   return this.cost
 }; 
@@ -47,20 +47,22 @@ $(document).ready(function() {
     event.preventDefault();
     const size = $("input:radio[name=size]:checked").val();
     const toppings = [];
-    const pizza = new Pizza(size, toppings, 0);
-    const toppingsCost = pizza.getToppingsCost(toppings);
-    const sizeCost = pizza.getTotal(size);
 
     $("input:checkbox[name=topping]:checked").each(function() {
       toppings.push($(this).val());
-      $("#displayPizza").append(toppings + "<br>");
     });
+
+    const pizza = new Pizza(size, toppings);
+    pizza.getToppingsCost();
+    const sizeCost = pizza.getTotal(size).toFixed(2);
+    
+    
 
     $("h5").html(sizeCost);
     $("#displayTotal").show();
 
     $("#displayPizza").show();
-    $("#displayPizza").append(size + "<br>");
+    $("#displayPizza").html(size + "<br>" + toppings.join(", "));
 
   });
 });
